@@ -17,7 +17,7 @@ const pages = [
   {
     file: "index.html", module: home, active: "index.html",
     title: "Vibe Massage & Recovery | Registered Massage Therapy in Amherstburg, ON",
-    description: "Personalized massage therapy in a calm, welcoming space in Amherstburg, Ontario. Swedish, deep tissue and cupping massage with Thomas Nahdee, RMT. Direct billing available.",
+    description: "Personalized massage therapy in a calm, welcoming space in Amherstburg, Ontario. Swedish, deep tissue and cupping massage with Thomas Nahdee, RMT and Chantelle Marcoux, RMT. Direct billing available.",
   },
   {
     file: "services.html", module: services, active: "services.html",
@@ -26,8 +26,8 @@ const pages = [
   },
   {
     file: "about.html", module: about, active: "about.html",
-    title: "About Thomas Nahdee, RMT | Vibe Massage & Recovery",
-    description: "Meet Thomas Nahdee, Registered Massage Therapist with six years of experience, specializing in deep tissue massage and cupping therapy.",
+    title: "About Our Therapists | Vibe Massage & Recovery",
+    description: "Meet Thomas Nahdee, RMT, specializing in deep tissue massage and cupping therapy, and Chantelle Marcoux, RMT since 2009, with a passion for prenatal and postpartum care.",
   },
   {
     file: "billing.html", module: billing, active: "billing.html",

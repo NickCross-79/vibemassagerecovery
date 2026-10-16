@@ -120,7 +120,7 @@ export const body = `
     <div class="intro__side reveal reveal-d1">
       <p>Vibe is a relaxing, calm and welcoming space that helps you manage pain, recover, and feel your best. Every treatment is tailored to you — your body, your goals, and how you're feeling that day.</p>
       <p>No sterile clinic feel. Just skilled, personal care in a space where you can actually unwind.</p>
-      <a class="link-arrow" href="about.html">Meet your therapist ${i("arrow")}</a>
+      <a class="link-arrow" href="about.html">Meet our therapists ${i("arrow")}</a>
     </div>
   </div>
 </section>
@@ -188,7 +188,7 @@ export const body = `
       <div class="therapist__badge"><div><strong>6</strong><span>Years<br>experience</span></div></div>
     </div>
     <div class="reveal reveal-d1">
-      <p class="eyebrow">Meet your therapist</p>
+      <p class="eyebrow">Meet your therapists</p>
       <h2 class="therapist__name" id="therapist-title">Thomas Nahdee, RMT</h2>
       <p class="therapist__title">Registered Massage Therapist</p>
       <blockquote class="quote">“My goal is simple: to help you feel and move better. No matter what brings you in, I want you to feel comfortable from the moment you walk through the door.”</blockquote>
@@ -200,8 +200,35 @@ export const body = `
       </dl>
       <div class="btn-row">
         <a class="btn" href="contact.html#book" data-book>Book with Thomas ${i("arrow")}</a>
-        <a class="btn btn--secondary" href="about.html">Read full bio</a>
+        <a class="btn btn--secondary" href="about.html#thomas">Read full bio</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper2" aria-labelledby="chantelle-title">
+  <div class="container grid-2 grid-2--wide-left">
+    <div class="reveal">
+      <h2 class="therapist__name" id="chantelle-title">Chantelle Marcoux, RMT</h2>
+      <p class="therapist__title">Registered Massage Therapist</p>
+      <blockquote class="quote">“Our bodies are always communicating with us, and sometimes we just need the space to listen. Come as you are. We’ll start there.”</blockquote>
+      <dl class="creds">
+        <div><dt>Experience</dt><dd>RMT since 2009</dd></div>
+        <div><dt>Background</dt><dd>Birth doula</dd></div>
+        <div><dt>Specializes in</dt><dd>Swedish massage<br>Deep tissue<br>Active release</dd></div>
+        <div><dt>Passion</dt><dd>Prenatal &amp; postpartum care</dd></div>
+      </dl>
+      <div class="btn-row">
+        <a class="btn" href="contact.html#book" data-book>Book with Chantelle ${i("arrow")}</a>
+        <a class="btn btn--secondary" href="about.html#chantelle">Read full bio</a>
+      </div>
+    </div>
+    <div class="therapist__media media-first reveal reveal-d1">
+      <div class="frame ratio-4x5">
+        <!-- Replace with a professional portrait of Chantelle when available -->
+        ${ph("portrait of Chantelle Marcoux, RMT", "brown")}
+      </div>
+      <div class="therapist__badge"><div><strong>17+</strong><span>Years<br>experience</span></div></div>
     </div>
   </div>
 </section>
