@@ -106,6 +106,8 @@ button { font: inherit; color: inherit; }
   .grid-2--wide-right { grid-template-columns: 0.85fr 1.15fr; }
   .grid-2--top { align-items: start; }
 }
+/* Media placed in the right column still shows first on small screens */
+@media (max-width: 959px) { .grid-2 > .media-first { order: -1; } }
 
 /* ---------- Typography ---------- */
 .eyebrow {

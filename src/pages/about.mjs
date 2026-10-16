@@ -10,7 +10,7 @@ export const body = `
   </div>
 </section>
 
-<section class="section" style="padding-top:0" aria-labelledby="therapist-title">
+<section class="section" id="thomas" style="padding-top:0" aria-labelledby="therapist-title">
   <div class="container grid-2 grid-2--wide-right grid-2--top">
     <div class="sticky-col reveal">
       <div class="therapist__media">
@@ -28,7 +28,7 @@ export const body = `
       </dl>
     </div>
     <div class="reveal reveal-d1">
-      <p class="eyebrow">Meet your therapist</p>
+      <p class="eyebrow">Meet your therapists</p>
       <h2 class="therapist__name" id="therapist-title">Thomas Nahdee, RMT</h2>
       <p class="therapist__title">Registered Massage Therapist</p>
       <div class="bio">
@@ -61,6 +61,58 @@ export const body = `
         <a class="btn" href="contact.html#book" data-book>Book with Thomas ${i("arrow")}</a>
         <a class="btn btn--secondary" href="services.html">View services &amp; pricing</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper2" id="chantelle" aria-labelledby="chantelle-title">
+  <div class="container grid-2 grid-2--wide-left grid-2--top">
+    <div class="reveal">
+      <p class="eyebrow">Meet your therapists</p>
+      <h2 class="therapist__name" id="chantelle-title">Chantelle Marcoux, RMT</h2>
+      <p class="therapist__title">Registered Massage Therapist</p>
+      <div class="bio">
+        <p>I have been a Registered Massage Therapist since 2009, and over the years, my work has continued to be shaped by one simple belief: <strong>our bodies are always communicating with us, and sometimes we just need the space to listen.</strong></p>
+        <p>My approach to massage therapy is professional, intentional, and effective. I specialize in Swedish massage, deep tissue techniques, and active release, tailoring each treatment to meet you where you are on any given day. No two bodies—or two treatments—are exactly alike.</p>
+        <p>I have a particular passion for working with the prenatal community. My experience as a birth doula gave me a deeper appreciation for the incredible changes women experience throughout pregnancy, birth, and postpartum, and I love being able to support women through these transformative seasons with thoughtful, therapeutic care.</p>
+        <p>For me, massage therapy is about more than addressing tension or discomfort. It is about creating a space where you can slow down, check in, and reconnect with yourself. Getting on the table gives you an opportunity to meet your body exactly where it is—to notice what you’re holding, where you may be disconnected, and what your body might be asking for.</p>
+        <p>My goal is to help you develop greater awareness of your body while providing focused, effective treatment that supports how you want to feel and move in your everyday life.</p>
+      </div>
+      <blockquote class="quote" style="margin-top:28px">Come as you are. We’ll start there.</blockquote>
+
+      <h3 class="h3" style="margin:40px 0 14px">Techniques I may use</h3>
+      <div class="chips">
+        <span class="chip chip--sage">Swedish Massage</span>
+        <span class="chip chip--sage">Deep Tissue Massage</span>
+        <span class="chip chip--sage">Active Release</span>
+      </div>
+
+      <h3 class="h3" style="margin:36px 0 14px">Who I work with</h3>
+      <div class="chips">
+        <span class="chip">Pregnancy &amp; prenatal</span>
+        <span class="chip">Postpartum</span>
+        <span class="chip">Anyone who needs to slow down and check in</span>
+      </div>
+
+      <div class="btn-row" style="margin-top:40px">
+        <a class="btn" href="contact.html#book" data-book>Book with Chantelle ${i("arrow")}</a>
+        <a class="btn btn--secondary" href="services.html">View services &amp; pricing</a>
+      </div>
+    </div>
+    <div class="sticky-col media-first reveal reveal-d1">
+      <div class="therapist__media">
+        <div class="frame frame--arch ratio-3x4">
+          <!-- Replace with a professional portrait of Chantelle when available -->
+          ${ph("portrait of Chantelle Marcoux, RMT", "brown")}
+        </div>
+        <div class="therapist__badge"><div><strong>17+</strong><span>Years<br>experience</span></div></div>
+      </div>
+      <dl class="creds">
+        <div><dt>Experience</dt><dd>RMT since 2009</dd></div>
+        <div><dt>Background</dt><dd>Birth doula</dd></div>
+        <div><dt>Specializes in</dt><dd>Swedish massage<br>Deep tissue<br>Active release</dd></div>
+        <div><dt>Passion</dt><dd>Prenatal &amp; postpartum care</dd></div>
+      </dl>
     </div>
   </div>
 </section>
