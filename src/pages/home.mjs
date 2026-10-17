@@ -17,7 +17,7 @@ export const locationSection = (withHeading = true) => `<div class="location">
     </div>
   </div>
   <div class="map reveal reveal-d1">
-    <iframe class="map__frame" title="Map showing Vibe Massage &amp; Recovery at 285 Sandwich St South, Amherstburg" src="https://www.google.com/maps?q=285+Sandwich+St+S,+Amherstburg,+ON&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    <iframe class="map__frame" title="Map showing Vibe Massage &amp; Recovery at 285 Sandwich St South, Amherstburg" src="https://www.google.com/maps?q=Vibe+massage+%26+recovery,+285+Sandwich+St+S,+Amherstburg,+ON+N9V+2A7&amp;ll=42.1010026,-83.108363&amp;z=17&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
     <div class="map__card">
       <div><strong>285 Sandwich St South</strong><span>Amherstburg, Ontario</span></div>
       <a class="btn btn--sm" href="${MAPS}" target="_blank" rel="noopener">Get directions ${i("arrow-up-right")}</a>
@@ -43,6 +43,18 @@ export const services = [
     name: "Massage + Cupping",
     short: "Massage combined with cupping, which uses gentle suction to lift muscle and connective tissue instead of pressing down.",
     from: "$85", dur: "30 – 75 min",
+  },
+  {
+    id: "prenatal",
+    name: "Prenatal Massage",
+    short: "A therapeutic massage tailored to the changing body of a pregnant person, using gentle, safe techniques.",
+    from: "$80", dur: "30 – 60 min",
+  },
+  {
+    id: "postnatal",
+    name: "Postnatal Massage",
+    short: "A therapeutic body massage designed to help women heal and recover after childbirth.",
+    from: "$80", dur: "30 – 60 min",
   },
 ];
 
@@ -105,7 +117,7 @@ export const body = `
       <div>
         <p class="eyebrow">Services &amp; pricing</p>
         <h2 class="h2" id="services-title">Treatments tailored <em>to you</em></h2>
-        <p class="lede">Three simple options, clear pricing, and the flexibility to choose the time that suits you.</p>
+        <p class="lede">Simple options, clear pricing, and the flexibility to choose the time that suits you.</p>
       </div>
       <a class="link-arrow" href="services.html">See full pricing ${i("arrow")}</a>
     </div>

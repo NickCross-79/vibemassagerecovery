@@ -4,7 +4,7 @@ export const TEL = "tel:+15197139682";
 export const SMS = "sms:+15197139682";
 export const EMAIL = "Vibemassageandrecovery@gmail.com";
 export const MAILTO = "mailto:Vibemassageandrecovery@gmail.com";
-export const MAPS = "https://www.google.com/maps/search/?api=1&query=285+Sandwich+St+S%2C+Amherstburg%2C+ON";
+export const MAPS = "https://www.google.com/maps/place/Vibe+massage+%26+recovery/@42.1010026,-83.108363,17z/data=!4m6!3m5!1s0x883b3d0024126b07:0x74165e81e0e4bbe8!8m2!3d42.1010026!4d-83.108363!16s%2Fg%2F11zdyxsmyl";
 
 export const i = (name, cls = "") => `<svg${cls ? ` class="${cls}"` : ""} aria-hidden="true"><use href="#i-${name}"/></svg>`;
 

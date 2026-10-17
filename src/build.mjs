@@ -17,12 +17,12 @@ const pages = [
   {
     file: "index.html", module: home, active: "index.html",
     title: "Vibe Massage & Recovery | Registered Massage Therapy in Amherstburg, ON",
-    description: "Personalized massage therapy in a calm, welcoming space in Amherstburg, Ontario. Swedish, deep tissue and cupping massage with Thomas Nahdee, RMT and Chantelle Marcoux, RMT. Direct billing available.",
+    description: "Personalized massage therapy in a calm, welcoming space in Amherstburg, Ontario. Swedish, deep tissue, cupping, prenatal and postnatal massage with Thomas Nahdee, RMT and Chantelle Marcoux, RMT. Direct billing available.",
   },
   {
     file: "services.html", module: services, active: "services.html",
     title: "Services & Pricing | Vibe Massage & Recovery, Amherstburg",
-    description: "Swedish / deep tissue massage from $60, 90-minute therapeutic massage, and massage + cupping. Clear pricing and direct billing in Amherstburg, Ontario.",
+    description: "Swedish / deep tissue massage from $60, 90-minute therapeutic massage, massage + cupping, and prenatal and postnatal massage. Clear pricing and direct billing in Amherstburg, Ontario.",
   },
   {
     file: "about.html", module: about, active: "about.html",

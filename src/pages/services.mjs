@@ -25,6 +25,8 @@ export const body = `
       <a href="#swedish-deep-tissue">Swedish / Deep Tissue</a>
       <a href="#therapeutic">Therapeutic Massage</a>
       <a href="#massage-cupping">Massage + Cupping</a>
+      <a href="#prenatal">Prenatal Massage</a>
+      <a href="#postnatal">Postnatal Massage</a>
     </nav>
   </div>
 </section>
@@ -65,6 +67,30 @@ export const body = `
       </div>
       <div class="reveal reveal-d1">
         ${table("Massage + Cupping", [[30, 85], [45, 110], [50, 117], [60, 140], [75, 155]])}
+      </div>
+    </article>
+
+    <article class="svc" id="prenatal" aria-labelledby="svc4">
+      <div class="svc__desc reveal">
+        <span class="svc__tag">30 – 60 min · from $80</span>
+        <h2 class="h2" id="svc4">Prenatal Massage</h2>
+        <p>A therapeutic massage tailored to the changing body of a pregnant person, using gentle, safe techniques.</p>
+        <div class="frame svc__media">${ph("prenatal massage", "light")}</div>
+      </div>
+      <div class="reveal reveal-d1">
+        ${table("Prenatal Massage", [[30, 80], [45, 100], [60, 130]])}
+      </div>
+    </article>
+
+    <article class="svc" id="postnatal" aria-labelledby="svc5">
+      <div class="svc__desc reveal">
+        <span class="svc__tag">30 – 60 min · from $80</span>
+        <h2 class="h2" id="svc5">Postnatal Massage</h2>
+        <p>A therapeutic body massage designed to help women heal and recover after childbirth.</p>
+        <div class="frame svc__media">${ph("postnatal massage", "brown")}</div>
+      </div>
+      <div class="reveal reveal-d1">
+        ${table("Postnatal Massage", [[30, 80], [45, 100], [60, 130]])}
       </div>
     </article>
   </div>
