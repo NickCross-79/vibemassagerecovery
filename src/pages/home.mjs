@@ -44,6 +44,18 @@ export const services = [
     short: "Massage combined with cupping, which uses gentle suction to lift muscle and connective tissue instead of pressing down.",
     from: "$85", dur: "30 – 75 min",
   },
+  {
+    id: "prenatal",
+    name: "Prenatal Massage",
+    short: "A therapeutic massage tailored to the changing body of a pregnant person, using gentle, safe techniques.",
+    from: "$80", dur: "30 – 60 min",
+  },
+  {
+    id: "postnatal",
+    name: "Postnatal Massage",
+    short: "A therapeutic body massage designed to help women heal and recover after childbirth.",
+    from: "$80", dur: "30 – 60 min",
+  },
 ];
 
 export const body = `
@@ -105,7 +117,7 @@ export const body = `
       <div>
         <p class="eyebrow">Services &amp; pricing</p>
         <h2 class="h2" id="services-title">Treatments tailored <em>to you</em></h2>
-        <p class="lede">Three simple options, clear pricing, and the flexibility to choose the time that suits you.</p>
+        <p class="lede">Simple options, clear pricing, and the flexibility to choose the time that suits you.</p>
       </div>
       <a class="link-arrow" href="services.html">See full pricing ${i("arrow")}</a>
     </div>
