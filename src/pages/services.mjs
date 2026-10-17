@@ -1,5 +1,20 @@
 import { i, ph, blob, ctaBand } from "../partials.mjs";
 
+// Single source for prices: used by the tables below and the structured data.
+export const SERVICES = [
+  { id: "swedish-deep-tissue", name: "Swedish / Deep Tissue Massage", prices: [[20, 60], [30, 80], [45, 100], [50, 110], [60, 130], [75, 140]],
+    description: "Swedish massage to relax the body, ease tension and improve circulation, or deep tissue massage using slow strokes and firm pressure to reach deeper layers of muscle and connective tissue." },
+  { id: "therapeutic", name: "Therapeutic Massage", prices: [[90, 165]],
+    description: "A 90-minute therapeutic treatment designed to relax the body, ease tension and improve circulation." },
+  { id: "massage-cupping", name: "Massage + Cupping", prices: [[30, 85], [45, 110], [50, 117], [60, 140], [75, 155]],
+    description: "Massage combined with cupping therapy, which uses suction to lift muscle and connective tissue instead of pressing down." },
+  { id: "prenatal", name: "Prenatal Massage", prices: [[30, 80], [45, 100], [60, 130]],
+    description: "A therapeutic massage tailored to the changing body of a pregnant person, using gentle, safe techniques." },
+  { id: "postnatal", name: "Postnatal Massage", prices: [[30, 80], [45, 100], [60, 130]],
+    description: "A therapeutic body massage designed to help women heal and recover after childbirth." },
+];
+const S = Object.fromEntries(SERVICES.map((x) => [x.id, x]));
+
 const table = (name, rows, single = false) => `<div class="price-card${single ? " price-card--single" : ""}">
   <div class="price-card__head"><span>Duration</span><span>Price</span></div>
   <table class="price-table">
@@ -18,8 +33,7 @@ export const body = `
 <section class="page-hero" aria-labelledby="page-title">
   ${blob("page-hero__blob", 2)}
   <div class="container">
-    <p class="eyebrow">Services &amp; pricing</p>
-    <h1 class="display" id="page-title">Choose your <em>treatment</em></h1>
+    <h1 class="display" id="page-title"><span class="eyebrow">Massage services &amp; pricing · Amherstburg</span>Choose your <em>treatment</em></h1>
     <p class="lede">Every session is personalized to you — whether you want to ease tension, recover from activity, improve how you move, or simply reset.</p>
     <nav class="jump" aria-label="Jump to service">
       <a href="#swedish-deep-tissue">Swedish / Deep Tissue</a>
@@ -42,7 +56,7 @@ export const body = `
         <div class="frame svc__media">${ph("Swedish / deep tissue treatment", "light")}</div>
       </div>
       <div class="reveal reveal-d1">
-        ${table("Swedish / Deep Tissue Massage", [[20, 60], [30, 80], [45, 100], [50, 110], [60, 130], [75, 140]])}
+        ${table(S["swedish-deep-tissue"].name, S["swedish-deep-tissue"].prices)}
       </div>
     </article>
 
@@ -54,7 +68,7 @@ export const body = `
         <div class="frame svc__media">${ph("therapeutic massage session", "brown")}</div>
       </div>
       <div class="reveal reveal-d1">
-        ${table("Therapeutic Massage", [[90, 165]], true)}
+        ${table(S.therapeutic.name, S.therapeutic.prices, true)}
       </div>
     </article>
 
@@ -66,7 +80,7 @@ export const body = `
         <div class="frame svc__media">${ph("cupping therapy", "")}</div>
       </div>
       <div class="reveal reveal-d1">
-        ${table("Massage + Cupping", [[30, 85], [45, 110], [50, 117], [60, 140], [75, 155]])}
+        ${table(S["massage-cupping"].name, S["massage-cupping"].prices)}
       </div>
     </article>
 
@@ -78,7 +92,7 @@ export const body = `
         <div class="frame svc__media">${ph("prenatal massage", "light")}</div>
       </div>
       <div class="reveal reveal-d1">
-        ${table("Prenatal Massage", [[30, 80], [45, 100], [60, 130]])}
+        ${table(S.prenatal.name, S.prenatal.prices)}
       </div>
     </article>
 
@@ -90,7 +104,7 @@ export const body = `
         <div class="frame svc__media">${ph("postnatal massage", "brown")}</div>
       </div>
       <div class="reveal reveal-d1">
-        ${table("Postnatal Massage", [[30, 80], [45, 100], [60, 130]])}
+        ${table(S.postnatal.name, S.postnatal.prices)}
       </div>
     </article>
   </div>

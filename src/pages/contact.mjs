@@ -1,12 +1,11 @@
-import { i, blob, TEL, SMS, MAILTO, PHONE, EMAIL } from "../partials.mjs";
+import { i, blob, TEL, SMS, MAILTO, PHONE, EMAIL, INSTAGRAM } from "../partials.mjs";
 import { locationSection } from "./home.mjs";
 
 export const body = `
 <section class="page-hero" aria-labelledby="page-title">
   ${blob("page-hero__blob", 1)}
   <div class="container">
-    <p class="eyebrow">Contact &amp; location</p>
-    <h1 class="display" id="page-title">Come find <em>your Vibe</em></h1>
+    <h1 class="display" id="page-title"><span class="eyebrow">Contact &amp; location · Amherstburg, Ontario</span>Come find <em>your Vibe</em></h1>
     <p class="lede">Book, ask a question, or get directions — whatever's easiest for you.</p>
   </div>
 </section>
@@ -50,9 +49,7 @@ export const body = `
     <p class="eyebrow" style="justify-content:center">Follow along</p>
     <h2 class="h2" id="social-title">Say hi on <em>social</em></h2>
     <div class="btn-row" style="justify-content:center;margin-top:20px">
-      <!-- TODO: add the real Facebook and Instagram profile URLs -->
-      <a class="btn btn--secondary" href="#">${i("facebook")} Facebook</a>
-      <a class="btn btn--secondary" href="#">${i("instagram")} Instagram</a>
+      <a class="btn btn--secondary" href="${INSTAGRAM}" target="_blank" rel="noopener me">${i("instagram")} @vibemassagenrecovery</a>
     </div>
   </div>
 </section>

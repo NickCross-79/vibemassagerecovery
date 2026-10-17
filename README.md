@@ -11,6 +11,7 @@ A static, mobile-first website for Vibe Massage & Recovery (Amherstburg, Ontario
 | `about.html` | Thomas Nahdee, RMT and Chantelle Marcoux, RMT: bios, credentials, techniques, why Vibe |
 | `billing.html` | Direct billing providers, referral info, insurance disclaimer, FAQ |
 | `contact.html` | Address, tap-to-call and tap-to-email, hours, parking, map, booking options |
+| `404.html` | Not-found page (noindex) |
 | `styleguide.html` | Design system: colours, type, booking button states, navigation, placeholders, mobile previews (not linked from the site) |
 
 ## Preview locally
@@ -40,6 +41,13 @@ The official logo was traced to SVG from `assets/img/logo-original.png`:
 
 Site colours in `styles.css` are matched to the logo's charcoal (`--brown-*` tokens) and sage (`--sage-*` tokens).
 
+## SEO
+
+- **Before launch:** set `SITE_URL` in `src/seo.mjs` to the live address (e.g. `https://www.example.ca`) and run `node src/build.mjs`. That turns on canonical URLs, `sitemap.xml`, the Sitemap line in `robots.txt`, social-share URLs and absolute URLs in the structured data.
+- Page titles and descriptions live in `src/build.mjs`. Structured data (business details, hours, therapists, prices) lives in `src/seo.mjs`. Prices come from `SERVICES` in `src/pages/services.mjs`, so the price tables and the structured data stay in sync.
+- Full audit, measurements and recommendations: `docs/SEO-REPORT.md`.
+- Fonts are self-hosted in `assets/fonts/` (SIL Open Font License).
+
 ## Booking, hours and map
 
 - **Booking:** every "Book" button opens the booking panel (`dialog` in `src/partials.mjs`) with Book online (ClinicSense), Call, Text and Email. Without JavaScript the buttons link straight to the ClinicSense booking site.
@@ -51,7 +59,7 @@ Site colours in `styles.css` are matched to the logo's charcoal (`--brown-*` tok
 Items marked with a yellow **Placeholder** tag or a `TODO` / `PLACEHOLDER` comment:
 
 1. **Photography.** Each image slot is a labelled `<div class="ph">`. Replace it with `<img src="assets/img/photo.jpg" alt="…">` inside the same `.frame` element and the crop is kept. Needed: portraits of Thomas and Chantelle, treatment photos (massage, cupping), the treatment room, and movement/recovery imagery.
-2. **Social links.** Add the Facebook and Instagram URLs (search for `TODO` in `src/`).
+2. **Facebook.** Instagram is linked. Add the Facebook page URL when there is one (search for `TODO` in `src/partials.mjs`), plus it in `sameAs` in `src/seo.mjs`.
 
 ## Content rules followed
 
