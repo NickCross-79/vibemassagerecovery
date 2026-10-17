@@ -30,6 +30,7 @@ export const body = `
     </div>
     <div class="billing__panel reveal reveal-d1">
       <div class="book-dialog__options">
+        <a class="book-opt book-opt--primary" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener"><span class="ci">${i("calendar")}</span><span><strong>Book online</strong><span>Choose your service and time</span></span>${i("arrow-up-right")}</a>
         <a class="book-opt" href="${TEL}"><span class="ci">${i("phone")}</span><span><strong>Call</strong><span>${PHONE}</span></span>${i("arrow")}</a>
         <a class="book-opt" href="${SMS}"><span class="ci">${i("chat")}</span><span><strong>Text</strong><span>${PHONE}</span></span>${i("arrow")}</a>
         <a class="book-opt" href="${MAILTO}?subject=Appointment%20request"><span class="ci">${i("mail")}</span><span><strong>Email</strong><span>${EMAIL}</span></span>${i("arrow")}</a>

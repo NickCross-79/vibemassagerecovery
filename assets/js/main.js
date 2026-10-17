@@ -1,13 +1,5 @@
 /* Vibe Massage & Recovery — site behaviour */
 
-/* ---------------------------------------------------------------
-   BOOKING
-   The online booking site (ClinicSense). Every "Book an Appointment"
-   button opens it in a new tab. If this is ever emptied, the buttons
-   open a booking panel with call / text / email options instead.
-   --------------------------------------------------------------- */
-const BOOKING_URL = "https://vibemassagerecovery.clinicsense.com/book/";
-
 (function () {
   const root = document.documentElement;
   root.classList.remove("no-js");
@@ -48,14 +40,8 @@ const BOOKING_URL = "https://vibemassagerecovery.clinicsense.com/book/";
   const dialog = document.getElementById("book-dialog");
   const serviceTag = dialog && dialog.querySelector("[data-book-service]");
   document.querySelectorAll("[data-book]").forEach((el) => {
-    if (BOOKING_URL) {
-      el.setAttribute("href", BOOKING_URL);
-      el.setAttribute("target", "_blank");
-      el.setAttribute("rel", "noopener");
-      return;
-    }
     el.addEventListener("click", (e) => {
-      if (!dialog || typeof dialog.showModal !== "function") return; // falls back to #book anchor
+      if (!dialog || typeof dialog.showModal !== "function") return; // falls back to the booking site link
       e.preventDefault();
       const service = el.getAttribute("data-service");
       if (serviceTag) {

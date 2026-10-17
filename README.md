@@ -42,7 +42,7 @@ Site colours in `styles.css` are matched to the logo's charcoal (`--brown-*` tok
 
 ## Booking, hours and map
 
-- **Booking:** every "Book" button links to the ClinicSense booking site (`BOOKING_URL` in `assets/js/main.js`, plus the button links in `src/`).
+- **Booking:** every "Book" button opens the booking panel (`dialog` in `src/partials.mjs`) with Book online (ClinicSense), Call, Text and Email. Without JavaScript the buttons link straight to the ClinicSense booking site.
 - **Hours:** Monday – Saturday, 8:00 AM – 9:00 PM; closed Sunday.
 - **Map:** a Google Maps embed of the address, in `locationSection` in `src/pages/home.mjs`.
 
