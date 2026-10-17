@@ -84,7 +84,7 @@ export const body = `
 
   <section class="sg-section">
     <h2 class="h3">Booking CTA states</h2>
-    <p class="muted">"Book an Appointment" is always the primary action and opens the online booking site in a new tab. If the booking link is ever removed, it falls back to a panel with call, text and email options.</p>
+    <p class="muted">"Book an Appointment" is always the primary action. It opens the booking panel: book online (ClinicSense), call, text or email (try the live button below).</p>
     ${states("", "Primary — on light backgrounds")}
     ${states("btn--secondary", "Secondary — Explore Services, View pricing")}
     <div class="sg-dark">
