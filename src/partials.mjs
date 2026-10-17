@@ -1,4 +1,5 @@
 // Shared markup used to assemble the static pages.
+import { abs, SITE_URL } from "./seo.mjs";
 export const PHONE = "519-713-9682";
 export const TEL = "tel:+15197139682";
 export const SMS = "sms:+15197139682";
@@ -44,9 +45,10 @@ ${sym("facebook", '<path d="M14.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6
 // The "-light" files are for dark backgrounds (footer).
 export const brand = (href = "index.html", light = false) => {
   const v = light ? "-light" : "";
+  const lazy = light ? ' loading="lazy" decoding="async"' : ""; // footer copy is below the fold
   return `<a class="brand" href="${href}" aria-label="Vibe Massage &amp; Recovery — home">
-  <img class="brand__mark" src="assets/img/logo-mark${v}.svg" alt="" width="304" height="327">
-  <span class="brand__text"><img class="brand__name" src="assets/img/logo-wordmark${v}.svg" alt="" width="331" height="71"><span class="brand__sub">Massage &amp; Recovery</span></span>
+  <img class="brand__mark" src="assets/img/logo-mark${v}.svg" alt="" width="304" height="327"${lazy}>
+  <span class="brand__text"><img class="brand__name" src="assets/img/logo-wordmark${v}.svg" alt="" width="331" height="71"${lazy}><span class="brand__sub">Massage &amp; Recovery</span></span>
 </a>`;
 };
 
@@ -59,51 +61,41 @@ const NAV = [
 ];
 const cur = (active, href) => (active === href ? ' aria-current="page"' : "");
 
-export const head = ({ title, description, path }) => `<!doctype html>
+export const head = ({ title, description, path, robots, schema = "" }) => {
+  const url = abs(path);
+  return `<!doctype html>
 <html lang="en-CA" class="no-js">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">${path === "404.html" && SITE_URL ? `
+  <base href="${SITE_URL}/">` : ""}
   <title>${title}</title>
   <meta name="description" content="${description}">
+  ${robots ? `<meta name="robots" content="${robots}">` : url ? `<link rel="canonical" href="${url}">` : ""}
   <meta name="theme-color" content="#f6f5f0">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Vibe Massage &amp; Recovery">
   <meta property="og:title" content="${title}">
   <meta property="og:description" content="${description}">
-  <meta property="og:locale" content="en_CA">
+  <meta property="og:locale" content="en_CA">${url ? `
+  <meta property="og:url" content="${url}">
+  <meta property="og:image" content="${abs("assets/img/og-image.png")}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Vibe Massage &amp; Recovery logo — registered massage therapy in Amherstburg, Ontario">` : ""}
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HealthAndBeautyBusiness",
-    "name": "Vibe Massage & Recovery",
-    "telephone": "+1-519-713-9682",
-    "email": "Vibemassageandrecovery@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "285 Sandwich St South",
-      "addressLocality": "Amherstburg",
-      "addressRegion": "ON",
-      "addressCountry": "CA"
-    },
-    "openingHoursSpecification": [{
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "opens": "08:00",
-      "closes": "21:00"
-    }],
-    "paymentAccepted": "E-transfer"
-  }
-  </script>
+  ${schema}
 </head>
 <body data-page="${path}">
 <a class="skip-link" href="#main">Skip to content</a>
 ${sprite}
 `;
+};
 
 export const header = (active) => `<header class="site-header">
   <div class="container nav">
@@ -198,7 +190,7 @@ export const footer = `<footer class="site-footer">
         <p><strong style="color:var(--paper)">Cancellations:</strong> 24 hours' notice is required. Cancellations or no-shows with less than 24 hours' notice are subject to a charge of 50% of the appointment cost.</p>
       </div>
     </div>
-    <p class="footer__wordmark" aria-hidden="true">find your vibe</p>
+    <div class="footer__wordmark" aria-hidden="true" data-text="find your vibe"></div>
     <div class="footer__bottom">
       <span>© <span data-year>2026</span> Vibe Massage &amp; Recovery · Amherstburg, Ontario</span>
       <span>Full terms and policies are available on our <a href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener">booking site</a>.</span>
@@ -257,5 +249,5 @@ export const close = `<script src="assets/js/main.js" defer></script>
 </html>
 `;
 
-export const page = ({ title, description, path, active, body }) =>
-  head({ title, description, path }) + header(active) + `<main id="main">\n${body}\n</main>\n` + footer + actionBar + dialog + close;
+export const page = ({ title, description, path, active, body, robots, schema }) =>
+  head({ title, description, path, robots, schema }) + header(active) + `<main id="main">\n${body}\n</main>\n` + footer + actionBar + dialog + close;

@@ -4,8 +4,7 @@ export const body = `
 <section class="page-hero" aria-labelledby="page-title">
   ${blob("page-hero__blob", 1)}
   <div class="container">
-    <p class="eyebrow">About Vibe</p>
-    <h1 class="display" id="page-title">You're in <em>good hands</em></h1>
+    <h1 class="display" id="page-title"><span class="eyebrow">Our registered massage therapists</span>You're in <em>good hands</em></h1>
     <p class="lede">A relaxing, chill environment where you can unwind, vibe, and get treatment that's built around you.</p>
   </div>
 </section>
@@ -93,6 +92,7 @@ export const body = `
         <span class="chip">Postpartum</span>
         <span class="chip">Anyone who needs to slow down and check in</span>
       </div>
+      <p style="margin-top:18px"><a class="link-arrow" href="services.html#prenatal">Prenatal &amp; postnatal massage pricing ${i("arrow")}</a></p>
 
       <div class="btn-row" style="margin-top:40px">
         <a class="btn" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book>Book with Chantelle ${i("arrow")}</a>

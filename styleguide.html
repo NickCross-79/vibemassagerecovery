@@ -5,39 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Style Guide | Vibe Massage & Recovery</title>
   <meta name="description" content="Design system for the Vibe Massage & Recovery website.">
+  <meta name="robots" content="noindex, follow">
   <meta name="theme-color" content="#f6f5f0">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Vibe Massage &amp; Recovery">
   <meta property="og:title" content="Style Guide | Vibe Massage & Recovery">
   <meta property="og:description" content="Design system for the Vibe Massage & Recovery website.">
   <meta property="og:locale" content="en_CA">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HealthAndBeautyBusiness",
-    "name": "Vibe Massage & Recovery",
-    "telephone": "+1-519-713-9682",
-    "email": "Vibemassageandrecovery@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "285 Sandwich St South",
-      "addressLocality": "Amherstburg",
-      "addressRegion": "ON",
-      "addressCountry": "CA"
-    },
-    "openingHoursSpecification": [{
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "opens": "08:00",
-      "closes": "21:00"
-    }],
-    "paymentAccepted": "E-transfer"
-  }
-  </script>
+  
 </head>
 <body data-page="styleguide.html">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -253,8 +234,8 @@
     <div class="footer__grid">
       <div class="footer__brand">
         <a class="brand" href="index.html" aria-label="Vibe Massage &amp; Recovery — home">
-  <img class="brand__mark" src="assets/img/logo-mark-light.svg" alt="" width="304" height="327">
-  <span class="brand__text"><img class="brand__name" src="assets/img/logo-wordmark-light.svg" alt="" width="331" height="71"><span class="brand__sub">Massage &amp; Recovery</span></span>
+  <img class="brand__mark" src="assets/img/logo-mark-light.svg" alt="" width="304" height="327" loading="lazy" decoding="async">
+  <span class="brand__text"><img class="brand__name" src="assets/img/logo-wordmark-light.svg" alt="" width="331" height="71" loading="lazy" decoding="async"><span class="brand__sub">Massage &amp; Recovery</span></span>
 </a>
         <p>Personalized massage therapy in a calm, welcoming space in Amherstburg, Ontario. Feel better, move better, and recover — at your own pace.</p>
         <div class="social">
@@ -290,7 +271,7 @@
         <p><strong style="color:var(--paper)">Cancellations:</strong> 24 hours' notice is required. Cancellations or no-shows with less than 24 hours' notice are subject to a charge of 50% of the appointment cost.</p>
       </div>
     </div>
-    <p class="footer__wordmark" aria-hidden="true">find your vibe</p>
+    <div class="footer__wordmark" aria-hidden="true" data-text="find your vibe"></div>
     <div class="footer__bottom">
       <span>© <span data-year>2026</span> Vibe Massage &amp; Recovery · Amherstburg, Ontario</span>
       <span>Full terms and policies are available on our <a href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener">booking site</a>.</span>

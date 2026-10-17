@@ -5,8 +5,7 @@ export const body = `
 <section class="page-hero" aria-labelledby="page-title">
   ${blob("page-hero__blob", 1)}
   <div class="container">
-    <p class="eyebrow">Contact &amp; location</p>
-    <h1 class="display" id="page-title">Come find <em>your Vibe</em></h1>
+    <h1 class="display" id="page-title"><span class="eyebrow">Contact &amp; location · Amherstburg, Ontario</span>Come find <em>your Vibe</em></h1>
     <p class="lede">Book, ask a question, or get directions — whatever's easiest for you.</p>
   </div>
 </section>

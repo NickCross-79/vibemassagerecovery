@@ -11,6 +11,7 @@ A static, mobile-first website for Vibe Massage & Recovery (Amherstburg, Ontario
 | `about.html` | Thomas Nahdee, RMT and Chantelle Marcoux, RMT: bios, credentials, techniques, why Vibe |
 | `billing.html` | Direct billing providers, referral info, insurance disclaimer, FAQ |
 | `contact.html` | Address, tap-to-call and tap-to-email, hours, parking, map, booking options |
+| `404.html` | Not-found page (noindex) |
 | `styleguide.html` | Design system: colours, type, booking button states, navigation, placeholders, mobile previews (not linked from the site) |
 
 ## Preview locally
@@ -39,6 +40,13 @@ The official logo was traced to SVG from `assets/img/logo-original.png`:
 - `assets/img/favicon.svg`: the mark on a light tile
 
 Site colours in `styles.css` are matched to the logo's charcoal (`--brown-*` tokens) and sage (`--sage-*` tokens).
+
+## SEO
+
+- **Before launch:** set `SITE_URL` in `src/seo.mjs` to the live address (e.g. `https://www.example.ca`) and run `node src/build.mjs`. That turns on canonical URLs, `sitemap.xml`, the Sitemap line in `robots.txt`, social-share URLs and absolute URLs in the structured data.
+- Page titles and descriptions live in `src/build.mjs`. Structured data (business details, hours, therapists, prices) lives in `src/seo.mjs`. Prices come from `SERVICES` in `src/pages/services.mjs`, so the price tables and the structured data stay in sync.
+- Full audit, measurements and recommendations: `docs/SEO-REPORT.md`.
+- Fonts are self-hosted in `assets/fonts/` (SIL Open Font License).
 
 ## Booking, hours and map
 

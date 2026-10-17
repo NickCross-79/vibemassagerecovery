@@ -1,10 +1,12 @@
 import { i, blob, ctaBand, TEL, PHONE, MAILTO } from "../partials.mjs";
 
-const faq = [
+export const faq = [
   ["Do you offer direct billing?", "Yes. Direct billing is available for Green Shield, Sun Life, TELUS Health and Blue Cross."],
   ["Do I need a doctor's referral?", "No referral is required in general, but requirements can vary depending on your insurance policy. Check with your provider if you're unsure."],
   ["Will my insurance cover my massage?", "Insurance coverage and requirements vary by provider and individual plan. Please contact your insurance provider to confirm your coverage before your appointment."],
   ["How can I pay?", "E-transfer is accepted. Direct billing is also available for the providers listed above."],
+  ["Do you offer prenatal and postnatal massage?", "Yes. Prenatal and postnatal massage are available in 30, 45 and 60-minute sessions ($80, $100 and $130). See <a href=\"services.html#prenatal\">services &amp; pricing</a> for details."],
+  ["How do I book an appointment?", "Book online through our <a href=\"https://vibemassagerecovery.clinicsense.com/book/\" target=\"_blank\" rel=\"noopener\">booking site</a>, or call, text or email us. We're open Monday to Saturday, 8:00 AM – 9:00 PM."],
   ["What happens after I book?", "A health history form will be emailed or texted to you. Please complete the form before your appointment."],
   ["What is your cancellation policy?", "24 hours' notice is required. Cancellations or no-shows with less than 24 hours' notice are subject to a charge of 50% of the appointment cost. Full terms and policies are available on our booking site."],
   ["Where do I park?", "Parking is available at the back of the building."],
@@ -15,8 +17,7 @@ export const body = `
 <section class="page-hero" aria-labelledby="page-title">
   ${blob("page-hero__blob", 2)}
   <div class="container">
-    <p class="eyebrow">Insurance &amp; direct billing</p>
-    <h1 class="display" id="page-title">Less paperwork. <em>More relief.</em></h1>
+    <h1 class="display" id="page-title"><span class="eyebrow">Massage therapy direct billing &amp; insurance</span>Less paperwork. <em>More relief.</em></h1>
     <p class="lede">We direct bill participating insurance providers, so you can focus on feeling better.</p>
   </div>
 </section>

@@ -62,9 +62,8 @@ export const body = `
 <section class="hero" data-hero aria-labelledby="hero-title">
   <div class="container hero__grid">
     <div class="reveal">
-      <a class="hero__location" href="${MAPS}" target="_blank" rel="noopener">${i("pin")}<span><span class="hide-sm">Registered </span>Massage Therapy · Amherstburg, ON</span></a>
-      <h1 class="display" id="hero-title">Feel better.<br>Move better.<br><em>Find your Vibe.</em></h1>
-      <p class="lede">Personalized massage therapy in a calm, welcoming space — for sore muscles, stress, recovery, or simply an hour to reset.</p>
+      <h1 class="display" id="hero-title"><span class="hero__location">${i("pin")}<span><span class="hide-sm">Registered </span>Massage Therapy in Amherstburg, ON</span></span>Feel better.<br>Move better.<br><em>Find your Vibe.</em></h1>
+      <p class="lede">Personalized registered massage therapy in a calm, welcoming space in Amherstburg — for sore muscles, stress, recovery, pregnancy, or simply an hour to reset.</p>
       <div class="btn-row btn-row--stack">
         <a class="btn" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book>Book an Appointment ${i("arrow")}</a>
         <a class="btn btn--secondary" href="services.html">Explore Services</a>
@@ -124,7 +123,7 @@ export const body = `
     <div class="service-list">
       ${services.map((s, n) => `<article class="service-row reveal">
         <span class="service-row__num">0${n + 1}</span>
-        <div class="service-row__title"><h3 class="h3">${s.name}</h3></div>
+        <div class="service-row__title"><h3 class="h3"><a href="services.html#${s.id}">${s.name}</a></h3></div>
         <p>${s.short}</p>
         <div class="service-row__meta">
           <span class="service-row__price"><small>${s.single ? "" : "From"}</small>${s.from}</span>
