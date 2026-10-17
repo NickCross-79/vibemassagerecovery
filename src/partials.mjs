@@ -3,6 +3,8 @@ import { abs, SITE_URL } from "./seo.mjs";
 export const PHONE = "519-713-9682";
 export const TEL = "tel:+15197139682";
 export const SMS = "sms:+15197139682";
+export const INSTAGRAM = "https://www.instagram.com/vibemassagenrecovery/";
+// TODO: add FACEBOOK once the page URL is known (and show its links in the footer and on contact.html)
 export const EMAIL = "Vibemassageandrecovery@gmail.com";
 export const MAILTO = "mailto:Vibemassageandrecovery@gmail.com";
 export const MAPS = "https://www.google.com/maps/place/Vibe+massage+%26+recovery/@42.1010026,-83.108363,17z/data=!4m6!3m5!1s0x883b3d0024126b07:0x74165e81e0e4bbe8!8m2!3d42.1010026!4d-83.108363!16s%2Fg%2F11zdyxsmyl";
@@ -162,9 +164,7 @@ export const footer = `<footer class="site-footer">
         ${brand("index.html", true)}
         <p>Personalized massage therapy in a calm, welcoming space in Amherstburg, Ontario. Feel better, move better, and recover — at your own pace.</p>
         <div class="social">
-          <!-- TODO: add the real Facebook and Instagram profile URLs -->
-          <a href="#" aria-label="Vibe Massage &amp; Recovery on Facebook (link coming soon)">${i("facebook")}</a>
-          <a href="#" aria-label="Vibe Massage &amp; Recovery on Instagram (link coming soon)">${i("instagram")}</a>
+          <a href="${INSTAGRAM}" target="_blank" rel="noopener me" aria-label="Vibe Massage &amp; Recovery on Instagram">${i("instagram")}</a>
         </div>
       </div>
       <div>

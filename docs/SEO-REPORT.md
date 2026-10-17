@@ -49,7 +49,7 @@ On the same uncompressed server as the baseline, performance was 91–92 (LCP 3.
 - **No domain / not deployed (critical).** Without it there are no canonical URLs, no sitemap and no share image in link previews, and nothing can be indexed.
 - **Photos are placeholders (high).** Real photos (treatment, room, portraits) improve engagement and image search. Use descriptive file names and `alt` text, WebP/AVIF at about 1600 px wide, and `fetchpriority="high"` on the home hero photo, which will become the LCP element.
 - **Hero card "6 years of experience · Deep tissue & cupping" (medium).** It describes Thomas only but reads as clinic-wide. Wording to be decided by the owner.
-- **Social links are `#` (low).** Add the real profiles; they then belong in the `sameAs` property in `src/seo.mjs`.
+- **Facebook link missing (low).** Instagram is now linked (footer, Contact page, `sameAs` in structured data). Facebook links were removed rather than left as dead `#` links; add the page URL when available.
 - **Prenatal description is truncated (low).** Waiting on the full ClinicSense text.
 - **LCP of about 2.7 s on simulated Slow 4G (low).** This is just above the 2.5 s "good" mark, and the remaining cost is the display font (105 KB). Real-user data from Search Console after launch will show whether it matters.
 

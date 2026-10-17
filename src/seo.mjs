@@ -79,6 +79,7 @@ export const business = (offers) => ({
   },
   geo: { "@type": "GeoCoordinates", latitude: BUSINESS.lat, longitude: BUSINESS.lng },
   hasMap: BUSINESS.mapsCid,
+  sameAs: ["https://www.instagram.com/vibemassagenrecovery/", BUSINESS.mapsCid],
   areaServed: { "@type": "City", name: "Amherstburg, Ontario" },
   openingHoursSpecification: [
     {
