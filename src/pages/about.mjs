@@ -58,7 +58,7 @@ export const body = `
       </div>
 
       <div class="btn-row" style="margin-top:40px">
-        <a class="btn" href="contact.html#book" data-book>Book with Thomas ${i("arrow")}</a>
+        <a class="btn" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book>Book with Thomas ${i("arrow")}</a>
         <a class="btn btn--secondary" href="services.html">View services &amp; pricing</a>
       </div>
     </div>
@@ -95,7 +95,7 @@ export const body = `
       </div>
 
       <div class="btn-row" style="margin-top:40px">
-        <a class="btn" href="contact.html#book" data-book>Book with Chantelle ${i("arrow")}</a>
+        <a class="btn" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book>Book with Chantelle ${i("arrow")}</a>
         <a class="btn btn--secondary" href="services.html">View services &amp; pricing</a>
       </div>
     </div>

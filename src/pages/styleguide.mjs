@@ -84,7 +84,7 @@ export const body = `
 
   <section class="sg-section">
     <h2 class="h3">Booking CTA states</h2>
-    <p class="muted">"Book an Appointment" is always the primary action. While no online booking link is set, it opens the booking panel (try the live button below).</p>
+    <p class="muted">"Book an Appointment" is always the primary action and opens the online booking site in a new tab. If the booking link is ever removed, it falls back to a panel with call, text and email options.</p>
     ${states("", "Primary — on light backgrounds")}
     ${states("btn--secondary", "Secondary — Explore Services, View pricing")}
     <div class="sg-dark">
@@ -93,9 +93,9 @@ export const body = `
     <div class="sg-states" style="margin-top:28px">
       <span class="sg-label">Live</span>
       <div class="sg-row">
-        <a class="btn" href="contact.html#book" data-book>Book an Appointment ${i("arrow")}</a>
-        <a class="btn btn--secondary" href="contact.html#book" data-book data-service="Massage + Cupping">Book this service</a>
-        <a class="btn btn--sm" href="contact.html#book" data-book>Small / navbar</a>
+        <a class="btn" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book>Book an Appointment ${i("arrow")}</a>
+        <a class="btn btn--secondary" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book data-service="Massage + Cupping">Book this service</a>
+        <a class="btn btn--sm" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book>Small / navbar</a>
       </div>
     </div>
   </section>

@@ -42,7 +42,7 @@ export const body = `
         <li>${i("check")}<span><strong>Cancellations</strong>24 hours' notice is required. Cancellations or no-shows with less than 24 hours' notice are subject to a charge of 50% of the appointment cost.</span></li>
       </ul>
       <div class="btn-row" style="margin-top:24px">
-        <a class="btn" href="contact.html#book" data-book>Book an Appointment ${i("arrow")}</a>
+        <a class="btn" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book>Book an Appointment ${i("arrow")}</a>
       </div>
     </div>
   </div>

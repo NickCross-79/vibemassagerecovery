@@ -37,7 +37,7 @@ const pages = [
   {
     file: "contact.html", module: contact, active: "contact.html",
     title: "Contact & Location | Vibe Massage & Recovery, Amherstburg",
-    description: "285 Sandwich St South, Amherstburg, Ontario. Call 519-713-9682. Open 8:00 AM – 9:00 PM. Parking at the back of the building.",
+    description: "285 Sandwich St South, Amherstburg, Ontario. Call 519-713-9682. Open Monday to Saturday, 8:00 AM – 9:00 PM. Parking at the back of the building.",
   },
   {
     file: "styleguide.html", module: styleguide, active: "",
