@@ -1,13 +1,13 @@
 import { i, ph, brand } from "../partials.mjs";
 
 const swatches = [
-  ["Espresso", "--brown-900", "#2f2219", "Primary buttons, dark sections"],
-  ["Walnut", "--brown-700", "#563b29", "Hover, logo leaf"],
-  ["Clay", "--brown-500", "#8a6446", "Italic accents"],
-  ["Sage", "--sage-600", "#6c8260", "Icons, eyebrows"],
-  ["Soft sage", "--sage-400", "#a2b591", "Accent buttons, focus ring"],
-  ["Sage mist", "--sage-100", "#e9eee2", "Section backgrounds"],
-  ["Ink", "--ink", "#1c1b19", "Headings & body text"],
+  ["Charcoal", "--brown-900", "#242e35", "Primary buttons, dark sections"],
+  ["Slate", "--brown-700", "#3b4952", "Hover states"],
+  ["Steel", "--brown-500", "#5f6e77", "Italic accents"],
+  ["Sage", "--sage-600", "#787d67", "Icons, eyebrows"],
+  ["Logo sage", "--sage-400", "#adb19e", "Logo V, accent buttons, focus ring"],
+  ["Sage mist", "--sage-100", "#ebece5", "Section backgrounds"],
+  ["Ink", "--ink", "#1d2327", "Headings & body text"],
   ["Paper", "--paper", "#f6f5f0", "Page background"],
 ];
 
@@ -58,7 +58,7 @@ export const body = `
     <p class="eyebrow">Design system</p>
     <h1 class="display">Vibe <em>style guide</em></h1>
     <p class="lede">The building blocks behind the site: colour, type, buttons and their states, navigation, and mobile layouts. Not linked from the public navigation.</p>
-    <p class="note sg-note" style="max-width:720px">${i("info")}<span>Colours are provisional and live as tokens in <code>assets/css/styles.css</code>. Once the official logo is supplied, adjust the brown and sage tokens to match it and the whole site updates.</span></p>
+    <p class="note sg-note" style="max-width:720px">${i("info")}<span>Colours are matched to the official logo (charcoal and sage) and live as tokens in <code>assets/css/styles.css</code>. Change a token and the whole site updates.</span></p>
   </div>
 </section>
 

@@ -40,17 +40,15 @@ ${sym("instagram", '<rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle
 ${sym("facebook", '<path d="M14.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4a21 21 0 0 0-2.4-.1c-2.4 0-4 1.4-4 4.1v2.1H8.7v3h2.6V21"/>')}
 </svg>`;
 
-// Placeholder mark — replace with the official Vibe logo (assets/img/logo.svg) when supplied.
-export const logoMark = `<svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
-  <circle cx="24" cy="24" r="24" fill="#d7e0cc"/>
-  <path d="M23.4 37C15.5 31.5 11 22 12.6 11.5c7.2 3.6 11.4 12.4 10.8 25.5Z" fill="#563b29"/>
-  <path d="M24.6 37C32.5 31.5 37 22 35.4 11.5 28.2 15.1 24 23.9 24.6 37Z" fill="#6c8260"/>
-</svg>`;
-
-export const brand = (href = "index.html") => `<a class="brand" href="${href}" aria-label="Vibe Massage &amp; Recovery — home">
-  ${logoMark}
-  <span class="brand__text"><span class="brand__name">Vibe</span><span class="brand__sub">Massage &amp; Recovery</span></span>
+// Official Vibe logo, traced to SVG from assets/img/logo-original.png.
+// The "-light" files are for dark backgrounds (footer).
+export const brand = (href = "index.html", light = false) => {
+  const v = light ? "-light" : "";
+  return `<a class="brand" href="${href}" aria-label="Vibe Massage &amp; Recovery — home">
+  <img class="brand__mark" src="assets/img/logo-mark${v}.svg" alt="" width="304" height="327">
+  <span class="brand__text"><img class="brand__name" src="assets/img/logo-wordmark${v}.svg" alt="" width="331" height="71"><span class="brand__sub">Massage &amp; Recovery</span></span>
 </a>`;
+};
 
 const NAV = [
   ["index.html", "Home"],
@@ -163,7 +161,7 @@ export const footer = `<footer class="site-footer">
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
-        ${brand()}
+        ${brand("index.html", true)}
         <p>Personalized massage therapy in a calm, welcoming space in Amherstburg, Ontario. Feel better, move better, and recover — at your own pace.</p>
         <div class="social">
           <!-- TODO: add the real Facebook and Instagram profile URLs -->
