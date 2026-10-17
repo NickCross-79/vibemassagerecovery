@@ -1,27 +1,5 @@
 import { i, ph, blob, ctaBand, PHONE, TEL, MAILTO, EMAIL, MAPS } from "../partials.mjs";
 
-export const mapArt = `<svg class="map__art" viewBox="0 0 800 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-  <rect width="800" height="520" fill="#e6e9df"/>
-  <path d="M0 0h150c-20 90 30 150 10 260s40 180 20 260H0Z" fill="#c9d6cf"/>
-  <path d="M150 0c-20 90 30 150 10 260s40 180 20 260" fill="none" stroke="#b8c8bf" stroke-width="3"/>
-  <g fill="#dde2d4">
-    <rect x="240" y="40" width="120" height="90" rx="6"/><rect x="380" y="40" width="160" height="90" rx="6"/><rect x="560" y="40" width="200" height="90" rx="6"/>
-    <rect x="240" y="150" width="120" height="110" rx="6"/><rect x="560" y="150" width="200" height="110" rx="6"/>
-    <rect x="240" y="300" width="120" height="100" rx="6"/><rect x="380" y="300" width="160" height="100" rx="6"/><rect x="560" y="300" width="200" height="100" rx="6"/>
-    <rect x="240" y="420" width="300" height="80" rx="6"/><rect x="560" y="420" width="200" height="80" rx="6"/>
-  </g>
-  <path d="M380 150h160v110H380z" fill="#d3dcc6"/>
-  <g stroke="#fbfaf6" stroke-linecap="round" fill="none">
-    <path d="M205 -10c-8 120 12 260 0 540" stroke-width="16"/>
-    <path d="M550 -10v540M370 -10v540" stroke-width="9"/>
-    <path d="M190 140h620M190 285h620M190 410h620" stroke-width="9"/>
-  </g>
-  <g font-family="DM Sans, sans-serif" font-size="13" font-weight="600" fill="#8d8a80" letter-spacing="1.5">
-    <text x="214" y="480" transform="rotate(-88 214 480)">SANDWICH ST S</text>
-    <text x="36" y="250" fill="#8fa39a" font-style="italic" letter-spacing="3">DETROIT RIVER</text>
-  </g>
-</svg>`;
-
 export const locationSection = (withHeading = true) => `<div class="location">
   <div class="reveal">
     ${withHeading ? `<p class="eyebrow">Visit us</p>
@@ -31,19 +9,15 @@ export const locationSection = (withHeading = true) => `<div class="location">
       <a class="contact-list__link" href="${MAPS}" target="_blank" rel="noopener"><span class="ci">${i("pin")}</span><span><small>Address</small><span>Vibe Massage &amp; Recovery<br>285 Sandwich St South, Amherstburg, Ontario</span></span></a>
       <a class="contact-list__link" href="${TEL}"><span class="ci">${i("phone")}</span><span><small>Phone — tap to call</small><span>${PHONE}</span></span></a>
       <a class="contact-list__link" href="${MAILTO}"><span class="ci">${i("mail")}</span><span><small>Email</small><span>${EMAIL}</span></span></a>
-      <div><span class="ci">${i("clock")}</span><span><small>Hours</small><span>8:00 AM – 9:00 PM <span class="placeholder-tag">Confirm days open</span></span></span></div>
+      <div><span class="ci">${i("clock")}</span><span><small>Hours</small><span>Monday – Saturday, 8:00 AM – 9:00 PM<br>Closed Sunday</span></span></div>
     </div>
     <div class="facts-row">
       <div class="fact">${i("car")}<span><strong>Parking</strong>Parking is available at the back of the building.</span></div>
       <div class="fact">${i("door")}<span><strong>Main floor</strong>The clinic is located on the main floor.</span></div>
     </div>
   </div>
-  <div class="map reveal reveal-d1" role="img" aria-label="Map placeholder showing 285 Sandwich St South, Amherstburg">
-    <!-- PLACEHOLDER: replace this block with a Google Maps <iframe> embed for 285 Sandwich St South, Amherstburg -->
-    ${mapArt}
-    <span class="placeholder-tag map__tag">Map embed placeholder</span>
-    <span class="map__pulse"></span>
-    <div class="map__pin"><span class="map__pin-dot"><img src="assets/img/logo-mark-light.svg" alt="" width="304" height="327"></span></div>
+  <div class="map reveal reveal-d1">
+    <iframe class="map__frame" title="Map showing Vibe Massage &amp; Recovery at 285 Sandwich St South, Amherstburg" src="https://www.google.com/maps?q=285+Sandwich+St+S,+Amherstburg,+ON&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
     <div class="map__card">
       <div><strong>285 Sandwich St South</strong><span>Amherstburg, Ontario</span></div>
       <a class="btn btn--sm" href="${MAPS}" target="_blank" rel="noopener">Get directions ${i("arrow-up-right")}</a>
@@ -80,13 +54,13 @@ export const body = `
       <h1 class="display" id="hero-title">Feel better.<br>Move better.<br><em>Find your Vibe.</em></h1>
       <p class="lede">Personalized massage therapy in a calm, welcoming space — for sore muscles, stress, recovery, or simply an hour to reset.</p>
       <div class="btn-row btn-row--stack">
-        <a class="btn" href="contact.html#book" data-book>Book an Appointment ${i("arrow")}</a>
+        <a class="btn" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book>Book an Appointment ${i("arrow")}</a>
         <a class="btn btn--secondary" href="services.html">Explore Services</a>
       </div>
       <ul class="hero__facts">
         <li>${i("shield")}Registered Massage Therapist</li>
         <li>${i("card")}Direct billing available</li>
-        <li>${i("clock")}Open 8 AM – 9 PM</li>
+        <li>${i("clock")}Open Mon – Sat, 8 AM – 9 PM</li>
       </ul>
     </div>
     <div class="hero__media reveal reveal-d2">
@@ -106,7 +80,7 @@ export const body = `
   <div class="container info-strip__grid">
     <a class="info-strip__item" href="${MAPS}" target="_blank" rel="noopener">${i("pin")}<span><small>Location</small><span>285 Sandwich St S, Amherstburg</span></span></a>
     <a class="info-strip__item" href="${TEL}">${i("phone")}<span><small>Call or text</small><span>${PHONE}</span></span></a>
-    <div class="info-strip__item">${i("clock")}<span><small>Hours</small><span>8:00 AM – 9:00 PM</span></span></div>
+    <div class="info-strip__item">${i("clock")}<span><small>Hours</small><span>Mon – Sat, 8 AM – 9 PM</span></span></div>
     <a class="info-strip__item" href="services.html">${i("sparkle")}<span><small>Massage from</small><span>$60 · 20 to 90 min</span></span></a>
   </div>
 </div>
@@ -145,7 +119,7 @@ export const body = `
           <span class="service-row__dur">${s.dur}</span>
         </div>
         <div class="service-row__actions">
-          <a class="btn btn--sm" href="contact.html#book" data-book data-service="${s.name}">Book this service</a>
+          <a class="btn btn--sm" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book data-service="${s.name}">Book this service</a>
         </div>
       </article>`).join("\n      ")}
     </div>
@@ -199,7 +173,7 @@ export const body = `
         <div><dt>Specializes in</dt><dd>Deep tissue massage<br>Cupping therapy</dd></div>
       </dl>
       <div class="btn-row">
-        <a class="btn" href="contact.html#book" data-book>Book with Thomas ${i("arrow")}</a>
+        <a class="btn" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book>Book with Thomas ${i("arrow")}</a>
         <a class="btn btn--secondary" href="about.html#thomas">Read full bio</a>
       </div>
     </div>
@@ -219,7 +193,7 @@ export const body = `
         <div><dt>Passion</dt><dd>Prenatal &amp; postpartum care</dd></div>
       </dl>
       <div class="btn-row">
-        <a class="btn" href="contact.html#book" data-book>Book with Chantelle ${i("arrow")}</a>
+        <a class="btn" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book>Book with Chantelle ${i("arrow")}</a>
         <a class="btn btn--secondary" href="about.html#chantelle">Read full bio</a>
       </div>
     </div>

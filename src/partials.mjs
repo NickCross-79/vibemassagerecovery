@@ -90,6 +90,12 @@ export const head = ({ title, description, path }) => `<!doctype html>
       "addressRegion": "ON",
       "addressCountry": "CA"
     },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "08:00",
+      "closes": "21:00"
+    }],
     "paymentAccepted": "E-transfer"
   }
   </script>
@@ -106,7 +112,7 @@ export const header = (active) => `<header class="site-header">
       ${NAV.map(([h, l]) => `<a href="${h}"${cur(active, h)}>${l}</a>`).join("\n      ")}
     </nav>
     <a class="nav__phone" href="${TEL}">${i("phone")}${PHONE}</a>
-    <a class="btn btn--sm nav__book" href="contact.html#book" data-book><span class="long">Book an Appointment</span><span class="short">Book</span></a>
+    <a class="btn btn--sm nav__book" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book><span class="long">Book an Appointment</span><span class="short">Book</span></a>
     <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><span></span></button>
   </div>
 </header>
@@ -114,7 +120,7 @@ export const header = (active) => `<header class="site-header">
   <nav aria-label="Mobile">
     ${NAV.map(([h, l]) => `<a href="${h}"${cur(active, h)}>${l}${i("arrow")}</a>`).join("\n    ")}
   </nav>
-  <a class="btn btn--block" href="contact.html#book" data-book>Book an Appointment ${i("arrow")}</a>
+  <a class="btn btn--block" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book>Book an Appointment ${i("arrow")}</a>
   <div class="mobile-menu__contact">
     <a href="${TEL}">${i("phone")}${PHONE}</a>
     <a href="${MAILTO}">${i("mail")}${EMAIL}</a>
@@ -147,10 +153,10 @@ export const ctaBand = (heading = "Ready to <em>find your Vibe?</em>") => `<sect
         <div>
           <p>Choose a time that works for you. Your health history form will be sent by email or text after you book.</p>
           <div class="btn-row btn-row--stack" style="margin-top:22px">
-            <a class="btn btn--sage" href="contact.html#book" data-book>Book an Appointment ${i("arrow")}</a>
+            <a class="btn btn--sage" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book>Book an Appointment ${i("arrow")}</a>
             <a class="btn btn--ghost-light" href="${TEL}">${i("phone")} Call ${PHONE}</a>
           </div>
-          <div class="cta-band__meta"><span>285 Sandwich St South, Amherstburg</span><span>8:00 AM – 9:00 PM</span></div>
+          <div class="cta-band__meta"><span>285 Sandwich St South, Amherstburg</span><span>Mon – Sat, 8:00 AM – 9:00 PM</span></div>
         </div>
       </div>
     </div>
@@ -173,7 +179,7 @@ export const footer = `<footer class="site-footer">
         <p class="footer__h">Explore</p>
         <ul class="footer__links">
           ${NAV.map(([h, l]) => `<li><a href="${h}">${l}</a></li>`).join("\n          ")}
-          <li><a href="contact.html#book" data-book>Book an Appointment</a></li>
+          <li><a href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book>Book an Appointment</a></li>
         </ul>
       </div>
       <div>
@@ -182,7 +188,7 @@ export const footer = `<footer class="site-footer">
           <li>${i("pin")}<a href="${MAPS}" target="_blank" rel="noopener">285 Sandwich St South<br>Amherstburg, Ontario</a></li>
           <li>${i("phone")}<a href="${TEL}">${PHONE}</a></li>
           <li>${i("mail")}<a href="${MAILTO}" style="overflow-wrap:anywhere">${EMAIL}</a></li>
-          <li>${i("clock")}<span>8:00 AM – 9:00 PM</span></li>
+          <li>${i("clock")}<span>Monday – Saturday, 8:00 AM – 9:00 PM<br>Closed Sunday</span></li>
         </ul>
       </div>
       <div class="footer__policy">
@@ -195,7 +201,7 @@ export const footer = `<footer class="site-footer">
     <p class="footer__wordmark" aria-hidden="true">find your vibe</p>
     <div class="footer__bottom">
       <span>© <span data-year>2026</span> Vibe Massage &amp; Recovery · Amherstburg, Ontario</span>
-      <span>Full terms and policies are available on our booking site.</span>
+      <span>Full terms and policies are available on our <a href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener">booking site</a>.</span>
     </div>
   </div>
 </footer>
@@ -203,7 +209,7 @@ export const footer = `<footer class="site-footer">
 
 export const actionBar = `<div class="action-bar" aria-label="Quick actions">
   <a class="btn btn--secondary" href="${TEL}" aria-label="Call ${PHONE}">${i("phone")} Call</a>
-  <a class="btn" href="contact.html#book" data-book>Book an Appointment</a>
+  <a class="btn" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book>Book an Appointment</a>
 </div>
 `;
 
@@ -216,10 +222,9 @@ export const dialog = `<dialog class="book-dialog" id="book-dialog" aria-labelle
   </div>
   <div class="book-dialog__body">
     <div class="book-dialog__options">
-      <!-- PLACEHOLDER: set BOOKING_URL in assets/js/main.js to send every Book button straight to the online booking site. -->
-      <a class="book-opt book-opt--primary" href="#" aria-disabled="true" onclick="return false">
+      <a class="book-opt book-opt--primary" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener">
         <span class="ci">${i("calendar")}</span>
-        <span><strong>Book online</strong><span>Online booking link coming soon <span class="placeholder-tag">Placeholder</span></span></span>
+        <span><strong>Book online</strong><span>Choose your service and time</span></span>
         ${i("arrow-up-right")}
       </a>
       <a class="book-opt" href="${TEL}">

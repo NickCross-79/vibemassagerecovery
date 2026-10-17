@@ -10,7 +10,7 @@ const table = (name, rows, single = false) => `<div class="price-card${single ? 
   </table>
   <div class="price-card__foot">
     <p>Direct billing available</p>
-    <a class="btn btn--sm" href="contact.html#book" data-book data-service="${name}">Book this service ${i("arrow")}</a>
+    <a class="btn btn--sm" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book data-service="${name}">Book this service ${i("arrow")}</a>
   </div>
 </div>`;
 

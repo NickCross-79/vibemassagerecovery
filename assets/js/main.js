@@ -2,12 +2,11 @@
 
 /* ---------------------------------------------------------------
    BOOKING
-   Paste the online booking link here when it's ready. Every
-   "Book an Appointment" button on the site will then go straight
-   to it. While it's empty, the buttons open a booking panel with
-   call / text / email options instead.
+   The online booking site (ClinicSense). Every "Book an Appointment"
+   button opens it in a new tab. If this is ever emptied, the buttons
+   open a booking panel with call / text / email options instead.
    --------------------------------------------------------------- */
-const BOOKING_URL = "";
+const BOOKING_URL = "https://vibemassagerecovery.clinicsense.com/book/";
 
 (function () {
   const root = document.documentElement;

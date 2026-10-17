@@ -521,24 +521,17 @@ a.contact-list__link:hover span { text-decoration: underline; text-underline-off
 }
 
 .map {
-  position: relative; min-height: 340px; border-radius: var(--radius-lg); overflow: hidden;
+  position: relative; min-height: 420px; border-radius: var(--radius-lg); overflow: hidden;
   background: #e6e7e0; border: 1px solid var(--line);
 }
-.map svg.map__art { position: absolute; inset: 0; width: 100%; height: 100%; }
-.map__pin { position: absolute; left: 50%; top: 46%; transform: translate(-50%, -100%); display: flex; flex-direction: column; align-items: center; }
-.map__pin-dot { width: 54px; height: 54px; border-radius: 999px 999px 999px 0; transform: rotate(-45deg); background: var(--brown-900); display: grid; place-items: center; box-shadow: 0 10px 24px -8px rgba(26,34,39,.6); }
-.map__pin-dot img { transform: rotate(45deg); width: auto; height: 30px; }
-.map__pulse { position: absolute; left: 50%; top: 46%; width: 18px; height: 18px; border-radius: 999px; background: var(--brown-500); transform: translate(-50%, -50%); }
-.map__pulse::after { content: ""; position: absolute; inset: -12px; border-radius: 999px; border: 2px solid var(--brown-500); opacity: .5; animation: pulse 2.4s var(--ease) infinite; }
-@keyframes pulse { from { transform: scale(.4); opacity: .7; } to { transform: scale(2.2); opacity: 0; } }
+.map__frame { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .map__card {
-  position: absolute; left: 16px; right: 16px; bottom: 16px;
+  position: absolute; left: 16px; right: 16px; bottom: 32px;
   background: var(--white); border-radius: var(--radius); padding: 16px 18px; box-shadow: var(--shadow-soft);
   display: flex; gap: 14px; align-items: center; justify-content: space-between; flex-wrap: wrap;
 }
 .map__card strong { display: block; font-size: 16px; }
 .map__card span { font-size: 14px; color: var(--ink-3); }
-.map__tag { position: absolute; top: 14px; left: 14px; }
 @media (min-width: 640px) { .map__card { left: auto; max-width: 420px; } }
 
 .facts-row { display: grid; gap: 12px; }

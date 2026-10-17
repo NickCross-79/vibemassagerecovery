@@ -24,7 +24,7 @@ export const body = `
       <h2 class="h2" id="book-title">Book an <em>appointment</em></h2>
       <p class="lede">Choose your service and a time that works. Online booking, a call, a text, or an email all work.</p>
       <div class="btn-row btn-row--stack" style="margin-top:26px">
-        <a class="btn" href="#book" data-book>Book an Appointment ${i("arrow")}</a>
+        <a class="btn" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book>Book an Appointment ${i("arrow")}</a>
         <a class="btn btn--secondary" href="services.html">View services &amp; pricing</a>
       </div>
     </div>
@@ -38,7 +38,7 @@ export const body = `
         <p><strong>After booking,</strong> a health history form will be emailed or texted to you. Please complete the form before your appointment.</p>
         <p><strong>Payment:</strong> E-transfer accepted. Direct billing to Green Shield, Sun Life, TELUS Health and Blue Cross.</p>
         <p><strong>Cancellations:</strong> 24 hours' notice is required. Cancellations or no-shows with less than 24 hours' notice are subject to a charge of 50% of the appointment cost.</p>
-        <p>Full terms and policies are available on our booking site.</p>
+        <p>Full terms and policies are available on our <a href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener">booking site</a>.</p>
       </div>
     </div>
   </div>
