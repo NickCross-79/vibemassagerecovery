@@ -43,7 +43,7 @@ export const locationSection = (withHeading = true) => `<div class="location">
     ${mapArt}
     <span class="placeholder-tag map__tag">Map embed placeholder</span>
     <span class="map__pulse"></span>
-    <div class="map__pin"><span class="map__pin-dot"><svg viewBox="0 0 48 48"><path d="M23.4 37C15.5 31.5 11 22 12.6 11.5c7.2 3.6 11.4 12.4 10.8 25.5Z" fill="#d7e0cc"/><path d="M24.6 37C32.5 31.5 37 22 35.4 11.5 28.2 15.1 24 23.9 24.6 37Z" fill="#a2b591"/></svg></span></div>
+    <div class="map__pin"><span class="map__pin-dot"><img src="assets/img/logo-mark-light.svg" alt="" width="304" height="327"></span></div>
     <div class="map__card">
       <div><strong>285 Sandwich St South</strong><span>Amherstburg, Ontario</span></div>
       <a class="btn btn--sm" href="${MAPS}" target="_blank" rel="noopener">Get directions ${i("arrow-up-right")}</a>
