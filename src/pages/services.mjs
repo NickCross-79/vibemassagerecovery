@@ -53,7 +53,6 @@ export const body = `
         <h2 class="h2" id="svc1">Swedish / Deep Tissue Massage</h2>
         <p>Swedish massage is a classic therapeutic treatment designed to relax the body, ease tension and improve circulation.</p>
         <p>Deep tissue massage is a specialized technique that uses slow strokes and firm pressure to reach the deeper layers of muscles and connective tissue.</p>
-        <div class="frame svc__media">${ph("Swedish / deep tissue treatment", "light")}</div>
       </div>
       <div class="reveal reveal-d1">
         ${table(S["swedish-deep-tissue"].name, S["swedish-deep-tissue"].prices)}
@@ -65,7 +64,6 @@ export const body = `
         <span class="svc__tag">90 min · $165</span>
         <h2 class="h2" id="svc2">Therapeutic Massage</h2>
         <p>Therapeutic treatment designed to relax the body, ease tension and improve circulation.</p>
-        <div class="frame svc__media">${ph("therapeutic massage session", "brown")}</div>
       </div>
       <div class="reveal reveal-d1">
         ${table(S.therapeutic.name, S.therapeutic.prices, true)}
@@ -77,7 +75,6 @@ export const body = `
         <span class="svc__tag">30 – 75 min · from $85</span>
         <h2 class="h2" id="svc3">Massage + Cupping</h2>
         <p>Cupping massage is an alternative therapy where the therapist places cups on the skin to create a vacuum suction, lifting the muscles and connective tissue instead of pressing down.</p>
-        <div class="frame svc__media">${ph("cupping therapy", "")}</div>
       </div>
       <div class="reveal reveal-d1">
         ${table(S["massage-cupping"].name, S["massage-cupping"].prices)}
@@ -89,7 +86,6 @@ export const body = `
         <span class="svc__tag">30 – 60 min · from $80</span>
         <h2 class="h2" id="svc4">Prenatal Massage</h2>
         <p>A therapeutic massage tailored to the changing body of a pregnant person, using gentle, safe techniques.</p>
-        <div class="frame svc__media">${ph("prenatal massage", "light")}</div>
       </div>
       <div class="reveal reveal-d1">
         ${table(S.prenatal.name, S.prenatal.prices)}
@@ -101,7 +97,6 @@ export const body = `
         <span class="svc__tag">30 – 60 min · from $80</span>
         <h2 class="h2" id="svc5">Postnatal Massage</h2>
         <p>A therapeutic body massage designed to help women heal and recover after childbirth.</p>
-        <div class="frame svc__media">${ph("postnatal massage", "brown")}</div>
       </div>
       <div class="reveal reveal-d1">
         ${table(S.postnatal.name, S.postnatal.prices)}
