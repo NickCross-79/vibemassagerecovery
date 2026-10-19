@@ -76,12 +76,9 @@ export const body = `
     </div>
     <div class="hero__media reveal reveal-d2">
       ${blob("hero__blob", 1)}
-      <div class="frame frame--arch">
-        ${ph("massage treatment, warm natural light", "")}
-      </div>
-      <div class="hero__card">
-        <span class="hero__card-icon">${i("leaf")}</span>
-        <span><strong>6 years of experience</strong><span>Deep tissue &amp; cupping therapy</span></span>
+      <!-- Photos coming soon: swap this logo panel for a treatment photo (see README) -->
+      <div class="frame frame--arch hero__brand">
+        <img src="assets/img/logo-mark.svg" alt="" width="304" height="327" fetchpriority="high">
       </div>
     </div>
   </div>
@@ -163,57 +160,45 @@ export const body = `
   </div>
 </section>
 
-<section class="section" aria-labelledby="therapist-title">
-  <div class="container grid-2 grid-2--wide-right">
-    <div class="therapist__media reveal">
-      <div class="frame ratio-4x5">
-        <!-- Replace with a professional portrait of Thomas when available -->
-        ${ph("portrait of Thomas Nahdee, RMT", "brown")}
-      </div>
-      <div class="therapist__badge"><div><strong>6</strong><span>Years<br>experience</span></div></div>
-    </div>
-    <div class="reveal reveal-d1">
+<section class="section" aria-labelledby="therapists-title">
+  <div class="container">
+    <div class="section-head reveal">
       <p class="eyebrow">Meet your therapists</p>
-      <h2 class="therapist__name" id="therapist-title">Thomas Nahdee, RMT</h2>
-      <p class="therapist__title">Registered Massage Therapist</p>
-      <blockquote class="quote">“My goal is simple: to help you feel and move better. No matter what brings you in, I want you to feel comfortable from the moment you walk through the door.”</blockquote>
-      <dl class="creds">
-        <div><dt>Experience</dt><dd>6 years</dd></div>
-        <div><dt>Education</dt><dd>CCHST — Windsor, Ontario</dd></div>
-        <div><dt>Certifications</dt><dd>RMT license<br>Cupping certification</dd></div>
-        <div><dt>Specializes in</dt><dd>Deep tissue massage<br>Cupping therapy</dd></div>
-      </dl>
-      <div class="btn-row">
-        <a class="btn" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book>Book with Thomas ${i("arrow")}</a>
-        <a class="btn btn--secondary" href="about.html#thomas">Read full bio</a>
-      </div>
+      <h2 class="h2" id="therapists-title">Two Registered Massage Therapists, <em>one calm space</em></h2>
     </div>
-  </div>
-</section>
-
-<section class="section section--paper2" aria-labelledby="chantelle-title">
-  <div class="container grid-2 grid-2--wide-left">
-    <div class="reveal">
-      <h2 class="therapist__name" id="chantelle-title">Chantelle Marcoux, RMT</h2>
-      <p class="therapist__title">Registered Massage Therapist</p>
-      <blockquote class="quote">“Our bodies are always communicating with us, and sometimes we just need the space to listen. Come as you are. We’ll start there.”</blockquote>
-      <dl class="creds">
-        <div><dt>Experience</dt><dd>RMT since 2009</dd></div>
-        <div><dt>Background</dt><dd>Birth doula</dd></div>
-        <div><dt>Specializes in</dt><dd>Swedish massage<br>Deep tissue<br>Active release</dd></div>
-        <div><dt>Passion</dt><dd>Prenatal &amp; postpartum care</dd></div>
-      </dl>
-      <div class="btn-row">
-        <a class="btn" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book>Book with Chantelle ${i("arrow")}</a>
-        <a class="btn btn--secondary" href="about.html#chantelle">Read full bio</a>
-      </div>
-    </div>
-    <div class="therapist__media media-first reveal reveal-d1">
-      <div class="frame ratio-4x5">
-        <!-- Replace with a professional portrait of Chantelle when available -->
-        ${ph("portrait of Chantelle Marcoux, RMT", "brown")}
-      </div>
-      <div class="therapist__badge"><div><strong>17+</strong><span>Years<br>experience</span></div></div>
+    <div class="therapist-cards">
+      <article class="therapist-card reveal" aria-labelledby="therapist-title">
+        <p class="therapist-card__years"><strong>6</strong> years experience</p>
+        <h3 class="therapist__name" id="therapist-title">Thomas Nahdee, RMT</h3>
+        <p class="therapist__title">Registered Massage Therapist</p>
+        <blockquote class="quote">“My goal is simple: to help you feel and move better. No matter what brings you in, I want you to feel comfortable from the moment you walk through the door.”</blockquote>
+        <dl class="creds">
+          <div><dt>Experience</dt><dd>6 years</dd></div>
+          <div><dt>Education</dt><dd>CCHST — Windsor, Ontario</dd></div>
+          <div><dt>Certifications</dt><dd>RMT license<br>Cupping certification</dd></div>
+          <div><dt>Specializes in</dt><dd>Deep tissue massage<br>Cupping therapy</dd></div>
+        </dl>
+        <div class="btn-row">
+          <a class="btn" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book>Book with Thomas ${i("arrow")}</a>
+          <a class="btn btn--secondary" href="about.html#thomas">Read full bio</a>
+        </div>
+      </article>
+      <article class="therapist-card reveal reveal-d1" aria-labelledby="chantelle-title">
+        <p class="therapist-card__years"><strong>17+</strong> years experience</p>
+        <h3 class="therapist__name" id="chantelle-title">Chantelle Marcoux, RMT</h3>
+        <p class="therapist__title">Registered Massage Therapist</p>
+        <blockquote class="quote">“Our bodies are always communicating with us, and sometimes we just need the space to listen. Come as you are. We’ll start there.”</blockquote>
+        <dl class="creds">
+          <div><dt>Experience</dt><dd>RMT since 2009</dd></div>
+          <div><dt>Background</dt><dd>Birth doula</dd></div>
+          <div><dt>Specializes in</dt><dd>Swedish massage<br>Deep tissue<br>Active release</dd></div>
+          <div><dt>Passion</dt><dd>Prenatal &amp; postpartum care</dd></div>
+        </dl>
+        <div class="btn-row">
+          <a class="btn" href="https://vibemassagerecovery.clinicsense.com/book/" target="_blank" rel="noopener" data-book>Book with Chantelle ${i("arrow")}</a>
+          <a class="btn btn--secondary" href="about.html#chantelle">Read full bio</a>
+        </div>
+      </article>
     </div>
   </div>
 </section>

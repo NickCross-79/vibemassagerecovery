@@ -387,6 +387,9 @@ button { font: inherit; color: inherit; }
 
 .hero__media { position: relative; max-width: 520px; width: 100%; margin-inline: auto; }
 .hero__media .frame { aspect-ratio: 4 / 3; }
+.hero__brand { display: grid; place-items: center; background: var(--sage-100); border: 1px solid var(--sage-200); }
+@media (max-width: 959px) { .hero__media:has(.hero__brand) { display: none; } }
+.frame.hero__brand > img { position: static; inset: auto; width: 46%; height: auto; object-fit: contain; }
 @media (min-width: 960px) { .hero__media .frame { aspect-ratio: 4 / 5; } }
 .hero__blob { position: absolute; z-index: -1; width: 120%; right: -30%; top: -12%; color: var(--sage-200); opacity: .9; }
 .hero__card {
@@ -467,6 +470,18 @@ a.info-strip__item:hover span { text-decoration: underline; text-underline-offse
 .therapist__badge strong { display: block; font-family: var(--font-display); font-size: 40px; line-height: .9; }
 .therapist__badge span { display: block; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-top: 4px; line-height: 1.2; }
 @media (min-width: 960px) { .therapist__badge { right: -36px; width: 132px; height: 132px; } .therapist__badge strong { font-size: 48px; } }
+.therapist-cards { display: grid; gap: 24px; }
+@media (min-width: 960px) { .therapist-cards { grid-template-columns: 1fr 1fr; gap: 32px; } }
+.therapist-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(24px, 4vw, 44px); display: flex; flex-direction: column; }
+.therapist-card .creds { margin-bottom: 28px; }
+.therapist-card .btn-row { margin-top: auto; }
+.therapist-card .therapist__name { font-size: clamp(30px, 3.6vw, 42px); }
+.therapist-card__years {
+  display: inline-flex; align-items: baseline; gap: 8px; width: fit-content; margin: 0 0 18px;
+  padding: 6px 14px; border-radius: 999px; background: var(--sage-100); color: var(--sage-700);
+  font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+}
+.therapist-card__years strong { font-family: var(--font-display); font-size: 20px; letter-spacing: 0; color: var(--brown-900); }
 .therapist__name { font-family: var(--font-display); font-size: clamp(36px, 5vw, 52px); line-height: 1.05; letter-spacing: -0.015em; }
 .therapist__title { font-weight: 600; color: var(--sage-700); margin: 6px 0 22px; }
 .creds { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin: 28px 0; }

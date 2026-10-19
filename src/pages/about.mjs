@@ -12,13 +12,7 @@ export const body = `
 <section class="section" id="thomas" style="padding-top:0" aria-labelledby="therapist-title">
   <div class="container grid-2 grid-2--wide-right grid-2--top">
     <div class="sticky-col reveal">
-      <div class="therapist__media">
-        <div class="frame frame--arch ratio-3x4">
-          <!-- Replace with a professional portrait of Thomas when available -->
-          ${ph("portrait of Thomas Nahdee, RMT", "brown")}
-        </div>
-        <div class="therapist__badge"><div><strong>6</strong><span>Years<br>experience</span></div></div>
-      </div>
+      <p class="therapist-card__years"><strong>6</strong> years experience</p>
       <dl class="creds">
         <div><dt>Experience</dt><dd>6 years</dd></div>
         <div><dt>Education</dt><dd>CCHST — Windsor, Ontario</dd></div>
@@ -100,13 +94,7 @@ export const body = `
       </div>
     </div>
     <div class="sticky-col media-first reveal reveal-d1">
-      <div class="therapist__media">
-        <div class="frame frame--arch ratio-3x4">
-          <!-- Replace with a professional portrait of Chantelle when available -->
-          ${ph("portrait of Chantelle Marcoux, RMT", "brown")}
-        </div>
-        <div class="therapist__badge"><div><strong>17+</strong><span>Years<br>experience</span></div></div>
-      </div>
+      <p class="therapist-card__years"><strong>17+</strong> years experience</p>
       <dl class="creds">
         <div><dt>Experience</dt><dd>RMT since 2009</dd></div>
         <div><dt>Background</dt><dd>Birth doula</dd></div>
@@ -141,9 +129,8 @@ export const body = `
 </section>
 
 <section class="section" aria-label="The space">
-  <div class="container grid-2">
-    <div class="frame ratio-4x3 reveal">${ph("the treatment room", "light")}</div>
-    <div class="reveal reveal-d1">
+  <div class="container">
+    <div class="reveal" style="max-width:720px">
       <p class="eyebrow">The space</p>
       <h2 class="h2">Come as you are. <em>Leave feeling better.</em></h2>
       <p class="lede">Located on the main floor at 285 Sandwich St South in Amherstburg, with parking at the back of the building.</p>

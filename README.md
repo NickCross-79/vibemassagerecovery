@@ -58,7 +58,7 @@ Site colours in `styles.css` are matched to the logo's charcoal (`--brown-*` tok
 
 Items marked with a yellow **Placeholder** tag or a `TODO` / `PLACEHOLDER` comment:
 
-1. **Photography.** Each image slot is a labelled `<div class="ph">`. Replace it with `<img src="assets/img/photo.jpg" alt="…">` inside the same `.frame` element and the crop is kept. Needed: portraits of Thomas and Chantelle, treatment photos (massage, cupping), the treatment room, and movement/recovery imagery.
+1. **Photography.** The photo placeholders were removed for launch. To add photos: put the image in `assets/img/` and use `<img src="assets/img/photo.jpg" alt="…">` inside a `.frame` element. Spots planned for photos: the home hero (currently the logo panel in `src/pages/home.mjs`), a portrait on each therapist card and About section, one photo per service in `src/pages/services.mjs`, and the treatment room in `src/pages/about.mjs`. Reverting the "Remove photo placeholders for launch" commit restores the original photo layout.
 2. **Facebook.** Instagram is linked. Add the Facebook page URL when there is one (search for `TODO` in `src/partials.mjs`), plus it in `sameAs` in `src/seo.mjs`.
 
 ## Content rules followed
