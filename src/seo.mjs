@@ -6,7 +6,7 @@
 // the XML sitemap, the Sitemap line in robots.txt, and absolute URLs in the
 // structured data. Leave it empty until the domain is known: wrong canonical
 // URLs are worse than none.
-export const SITE_URL = "";
+export const SITE_URL = "https://www.vibemassageandrecovery.com";
 
 export const BUSINESS = {
   name: "Vibe Massage & Recovery",

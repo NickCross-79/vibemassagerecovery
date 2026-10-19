@@ -5,13 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Our RMTs: Thomas Nahdee & Chantelle Marcoux | Vibe Massage & Recovery</title>
   <meta name="description" content="Meet our Registered Massage Therapists in Amherstburg: Thomas Nahdee (deep tissue, cupping) and Chantelle Marcoux, RMT since 2009 (prenatal & postpartum care).">
-  
+  <link rel="canonical" href="https://www.vibemassageandrecovery.com/about.html">
   <meta name="theme-color" content="#f6f5f0">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Vibe Massage &amp; Recovery">
   <meta property="og:title" content="Our RMTs: Thomas Nahdee & Chantelle Marcoux | Vibe Massage & Recovery">
   <meta property="og:description" content="Meet our Registered Massage Therapists in Amherstburg: Thomas Nahdee (deep tissue, cupping) and Chantelle Marcoux, RMT since 2009 (prenatal & postpartum care).">
   <meta property="og:locale" content="en_CA">
+  <meta property="og:url" content="https://www.vibemassageandrecovery.com/about.html">
+  <meta property="og:image" content="https://www.vibemassageandrecovery.com/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Vibe Massage &amp; Recovery logo — registered massage therapy in Amherstburg, Ontario">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
@@ -24,8 +29,12 @@
   "@graph": [
     {
       "@type": "HealthAndBeautyBusiness",
+      "@id": "https://www.vibemassageandrecovery.com/#business",
       "name": "Vibe Massage & Recovery",
       "description": "Registered massage therapy clinic in Amherstburg, Ontario offering Swedish, deep tissue, therapeutic, cupping, prenatal and postnatal massage, with direct billing to Green Shield, Sun Life, TELUS Health and Blue Cross.",
+      "url": "https://www.vibemassageandrecovery.com/",
+      "logo": "https://www.vibemassageandrecovery.com/assets/img/logo-original.png",
+      "image": "https://www.vibemassageandrecovery.com/assets/img/og-image.png",
       "telephone": "+1-519-713-9682",
       "email": "Vibemassageandrecovery@gmail.com",
       "address": {
@@ -76,12 +85,14 @@
       "employee": [
         {
           "@type": "Person",
+          "@id": "https://www.vibemassageandrecovery.com/about.html#thomas",
           "name": "Thomas Nahdee",
           "honorificSuffix": "RMT",
           "jobTitle": "Registered Massage Therapist"
         },
         {
           "@type": "Person",
+          "@id": "https://www.vibemassageandrecovery.com/about.html#chantelle",
           "name": "Chantelle Marcoux",
           "honorificSuffix": "RMT",
           "jobTitle": "Registered Massage Therapist"
@@ -90,6 +101,7 @@
     },
     {
       "@type": "Person",
+      "@id": "https://www.vibemassageandrecovery.com/about.html#thomas",
       "name": "Thomas Nahdee",
       "honorificSuffix": "RMT",
       "jobTitle": "Registered Massage Therapist",
@@ -100,13 +112,16 @@
         "IASTM",
         "Trigger point therapy"
       ],
+      "url": "https://www.vibemassageandrecovery.com/about.html#thomas",
       "worksFor": {
         "@type": "HealthAndBeautyBusiness",
-        "name": "Vibe Massage & Recovery"
+        "name": "Vibe Massage & Recovery",
+        "@id": "https://www.vibemassageandrecovery.com/#business"
       }
     },
     {
       "@type": "Person",
+      "@id": "https://www.vibemassageandrecovery.com/about.html#chantelle",
       "name": "Chantelle Marcoux",
       "honorificSuffix": "RMT",
       "jobTitle": "Registered Massage Therapist",
@@ -117,10 +132,29 @@
         "Prenatal massage",
         "Postnatal massage"
       ],
+      "url": "https://www.vibemassageandrecovery.com/about.html#chantelle",
       "worksFor": {
         "@type": "HealthAndBeautyBusiness",
-        "name": "Vibe Massage & Recovery"
+        "name": "Vibe Massage & Recovery",
+        "@id": "https://www.vibemassageandrecovery.com/#business"
       }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.vibemassageandrecovery.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://www.vibemassageandrecovery.com/about.html"
+        }
+      ]
     }
   ]
 }

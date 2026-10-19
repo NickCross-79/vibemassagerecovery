@@ -43,7 +43,7 @@ Site colours in `styles.css` are matched to the logo's charcoal (`--brown-*` tok
 
 ## SEO
 
-- **Before launch:** set `SITE_URL` in `src/seo.mjs` to the live address (e.g. `https://www.example.ca`) and run `node src/build.mjs`. That turns on canonical URLs, `sitemap.xml`, the Sitemap line in `robots.txt`, social-share URLs and absolute URLs in the structured data.
+- **Domain:** `SITE_URL` in `src/seo.mjs` is `https://www.vibemassageandrecovery.com` (the bare domain redirects to www). It drives canonical URLs, `sitemap.xml`, the Sitemap line in `robots.txt`, social-share URLs and absolute URLs in the structured data. Change it there and run `node src/build.mjs` if the domain ever changes.
 - Page titles and descriptions live in `src/build.mjs`. Structured data (business details, hours, therapists, prices) lives in `src/seo.mjs`. Prices come from `SERVICES` in `src/pages/services.mjs`, so the price tables and the structured data stay in sync.
 - Full audit, measurements and recommendations: `docs/SEO-REPORT.md`.
 - Fonts are self-hosted in `assets/fonts/` (SIL Open Font License).
