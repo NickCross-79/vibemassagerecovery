@@ -586,7 +586,8 @@ a.contact-list__link:hover span { text-decoration: underline; text-underline-off
 /* ---------- Page hero (inner pages) ---------- */
 .page-hero { padding-top: clamp(40px, 7vw, 96px); padding-bottom: clamp(40px, 6vw, 72px); position: relative; overflow: hidden; }
 .page-hero .display { font-size: clamp(44px, 8vw, 80px); margin-bottom: 20px; }
-.page-hero__blob { position: absolute; right: -10%; top: -30%; width: 55%; max-width: 640px; color: var(--sage-100); z-index: -1; }
+.page-hero__blob { position: absolute; right: -10%; top: -30%; width: 55%; max-width: 640px; color: var(--sage-100); z-index: 0; }
+.page-hero > .container { position: relative; z-index: 1; }
 .jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
 .jump a {
   text-decoration: none; font-size: 15px; font-weight: 500; padding: 9px 16px; border-radius: 999px;
